@@ -220,8 +220,7 @@ public class Main {
         if (serieBusca.isPresent()){
             Serie serie = serieBusca.get();
             System.out.println("Digite o ano limite de lançamento");
-
-            var anoLancamento = input.nextInt();
+            int anoLancamento = input.nextInt();
             input.nextLine();
 
             List<Episode> episodesAno = repository.epPorSerieEPorAno(serie, anoLancamento);

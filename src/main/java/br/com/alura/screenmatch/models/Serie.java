@@ -1,6 +1,8 @@
 package br.com.alura.screenmatch.models;
 
 import jakarta.persistence.*;
+import space.dynomake.libretranslate.Language;
+import space.dynomake.libretranslate.Translator;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,6 +39,7 @@ public class Serie {
         this.genero = Categoria.fromString(serieData.genero().split(",")[0].trim());
         this.atores = serieData.atores();
         this.poster = serieData.poster();
+        this.sinopse = (Translator.translate(Language.ENGLISH, Language.PORTUGUESE, sinopse));
     }
 
     public Long getId() {

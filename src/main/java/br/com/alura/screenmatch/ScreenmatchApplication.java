@@ -8,19 +8,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ScreenmatchApplication implements CommandLineRunner {
-	@Autowired
-	SerieRepository repository;
-
-	@Override
-	public void run(String... args) throws Exception {
-
-		Main main = new Main(repository);
-		main.exibeMenu();
-	}
+public class ScreenmatchApplication {
 
 	public static void main(String[] args) {
-
 		SpringApplication.run(ScreenmatchApplication.class, args);
 
 	}
